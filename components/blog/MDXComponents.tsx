@@ -1,4 +1,6 @@
-import type { MDXComponents as MDXComponentsType } from "mdx/types";
+import type { MDXRemoteProps } from "next-mdx-remote/rsc";
+
+type MDXComponentsType = NonNullable<MDXRemoteProps["components"]>;
 
 export const mdxComponents: MDXComponentsType = {
     h1: (props) => (

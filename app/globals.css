@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import "highlight.js/styles/github-dark.min.css";
 
 @theme inline {
   --color-primary: #6366f1;

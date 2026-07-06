@@ -68,7 +68,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </header>
 
-        <div className="prose-config max-w-none">
+        <div className="prose prose-invert max-w-none">
           <MDXRemote
             source={post.content}
             options={{
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 rehypePlugins: [rehypeHighlight],
               },
             }}
-            components={mdxComponents as React.ComponentProps<typeof MDXRemote>["components"]}
+            components={mdxComponents}
           />
         </div>
       </article>

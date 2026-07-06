@@ -37,14 +37,14 @@ export function Projects() {
                 <div className="mb-4 flex items-start justify-between">
                   <div>
                     <h3 className="text-lg font-semibold">{project.title}</h3>
-                    {"status" in project && (
+                    {project.status && (
                       <p className="mt-0.5 text-xs text-primary-light">
-                        {project.status as string}
+                        {project.status}
                       </p>
                     )}
-                    {"duration" in project && (
+                    {project.duration && (
                       <p className="mt-0.5 text-xs text-text-secondary">
-                        {project.duration as string}
+                        {project.duration}
                       </p>
                     )}
                   </div>
@@ -57,11 +57,11 @@ export function Projects() {
                     <Badge key={tech}>{tech}</Badge>
                   ))}
                 </div>
-                {"links" in project && project.links && (
+                {project.links && (
                   <div className="mt-4 flex gap-3">
-                    {"frontend" in project.links && project.links.frontend && (
+                    {project.links.frontend && (
                       <a
-                        href={project.links.frontend as string}
+                        href={project.links.frontend}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-xs text-text-secondary transition-colors hover:text-primary"
@@ -72,9 +72,9 @@ export function Projects() {
                         Frontend
                       </a>
                     )}
-                    {"backend" in project.links && project.links.backend && (
+                    {project.links.backend && (
                       <a
-                        href={project.links.backend as string}
+                        href={project.links.backend}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-xs text-text-secondary transition-colors hover:text-primary"
@@ -85,9 +85,9 @@ export function Projects() {
                         Backend
                       </a>
                     )}
-                    {"github" in project.links && project.links.github && (
+                    {project.links.github && (
                       <a
-                        href={project.links.github as string}
+                        href={project.links.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-xs text-text-secondary transition-colors hover:text-primary"
