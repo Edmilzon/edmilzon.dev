@@ -26,7 +26,7 @@ export const siteConfig: SiteConfig = {
       role: "Desarrollador de software",
       period: "Julio–noviembre de 2026",
       summary:
-        "Contribuí a sistemas de gestión web para farmacia, autopartes y cafetería, trabajando en flujos de punto de venta, compras, catálogo e inventario.",
+        "Desarrollé software para farmacia, autopartes, cafetería y una plataforma multitienda, colaborando en interfaces, APIs, puntos de venta, compras e inventario.",
       areas: [
         {
           name: "Farmacia",
@@ -43,8 +43,13 @@ export const siteConfig: SiteConfig = {
           description:
             "Colaboré en consultas agrupadas para punto de venta, compras, recepción, ventas e inventario, y en mejoras de interfaz para producción, recetas e historial.",
         },
+        {
+          name: "Sistema multitienda",
+          description:
+            "Colaboré en el frontend con React y TypeScript y en la API con Java 21, Spring Boot y PostgreSQL. Trabajé en el punto de venta, compras e inventario: descuentos y redondeo de caja, costos y precios derivados de compras y promociones por sucursal. También optimicé consultas e índices para la búsqueda de productos.",
+        },
       ],
-      stack: ["Java", "Spring Boot", "React", "TypeScript", "APIs REST"],
+      stack: ["Java 21", "Spring Boot", "React", "TypeScript", "PostgreSQL", "APIs REST"],
     },
     {
       company: "Universidad Mayor de San Simón (UMSS)",

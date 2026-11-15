@@ -11,16 +11,16 @@ export function Experience() {
             Software para <span className="display-accent">operaciones reales.</span>
           </h2>
           <p>
-            Experiencia en sistemas de gestión para farmacia, autopartes y
-            cafetería, además de un proyecto remunerado para la UMSS.
+            Experiencia en sistemas para farmacia, autopartes y cafetería, una
+            plataforma multitienda y un proyecto remunerado para la UMSS.
           </p>
         </header>
 
         <div className="experience-statement" data-moment="word-highlight">
           <p className="mo-wh__text">
-            En farmacia trabajé en catálogo y sincronización de productos; en
-            autopartes, en compras y punto de venta; y en cafetería, en ventas,
-            inventario y producción.
+            En el sistema multitienda contribuí a los flujos de caja, compras,
+            inventario y promociones; en farmacia, a catálogo y sincronización;
+            y en cafetería, a ventas y producción.
           </p>
         </div>
 
@@ -51,7 +51,9 @@ export function Experience() {
 
               <p className="experience-summary">{experience.summary}</p>
 
-              <div className="experience-areas">
+              <div
+                className={`experience-areas${experience.areas.length > 3 ? " experience-areas--quad" : ""}`}
+              >
                 {experience.areas.map((area, index) => (
                   <div className="experience-area" key={area.name}>
                     <span className="experience-index" aria-hidden="true">
