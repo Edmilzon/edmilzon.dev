@@ -23,6 +23,11 @@ export function Hero() {
               responder a necesidades concretas.
             </p>
 
+            <p className="hero-availability">
+              <span aria-hidden="true" />
+              Disponible para nuevas oportunidades laborales
+            </p>
+
             <div className="btn-row hero-actions">
               <a className="btn btn--primary btn--xl" href={siteConfig.links.email}>
                 Escribirme <ArrowUpRight size={17} aria-hidden="true" />

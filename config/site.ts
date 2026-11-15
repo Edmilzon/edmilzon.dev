@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   name: "Ariel Edmilzon Luna Tudela",
   title: "Ariel Edmilzon Luna Tudela — Desarrollador de software",
   description:
-    "Portafolio de Ariel Edmilzon Luna Tudela, desarrollador de software en Cochabamba, Bolivia. Experiencia con Java, Spring Boot, React, TypeScript, NestJS, Flutter y PostgreSQL.",
+    "Portafolio de Ariel Edmilzon Luna Tudela, desarrollador de software en Cochabamba, Bolivia y disponible para nuevas oportunidades. Experiencia con Java, Spring Boot, React, TypeScript, NestJS, Flutter y PostgreSQL.",
   url: "https://edmilzon-dev.vercel.app",
   author: {
     name: "Ariel Edmilzon Luna Tudela",
@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
     {
       company: "Soft-Craft-Bol",
       role: "Desarrollador de software",
-      period: "2026",
+      period: "Julio–noviembre de 2026",
       summary:
         "Contribuí a sistemas de gestión web para farmacia, autopartes y cafetería, trabajando en flujos de punto de venta, compras, catálogo e inventario.",
       areas: [
@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
     {
       company: "Universidad Mayor de San Simón (UMSS)",
       role: "Desarrollador de software",
-      period: "2024",
+      period: "Mayo–noviembre de 2024",
       employmentType: "Trabajo remunerado",
       summary:
         "Participé en el desarrollo del Sistema de Becas PBI dentro de la UMSS, como parte de un equipo de cuatro personas.",

@@ -255,6 +255,25 @@ h4 {
   line-height: 1.62;
 }
 
+.hero-availability {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  color: #d6ddf4;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hero-availability span {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #8ee0a1;
+  box-shadow: 0 0 0 4px rgb(142 224 161 / 12%);
+}
+
 .hero .btn-row {
   gap: 12px;
   margin-top: 27px;
