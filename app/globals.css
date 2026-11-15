@@ -1,36 +1,20 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @import "highlight.js/styles/github-dark.min.css";
-
+@import "./styles/vendor/system.css";
+@import "./styles/vendor/layout.css";
+@import "./styles/vendor/cards.css";
+@import "./styles/vendor/motion.css";
 @theme inline {
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-primary-dark: #4f46e5;
-  --color-surface: #0f0f11;
-  --color-surface-light: #1a1a1e;
-  --color-surface-lighter: #27272a;
-  --color-text-primary: #e4e4e7;
-  --color-text-secondary: #a1a1aa;
-  --color-border: #27272a;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-surface-lighter) transparent;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--color-surface);
-  color: var(--color-text-primary);
-}
-
-::selection {
-  background: var(--color-primary);
-  color: white;
+  --color-primary: #91aaff;
+  --color-primary-light: #a3b7ff;
+  --color-primary-dark: #7896f2;
+  --color-surface: #0b0e14;
+  --color-surface-light: #141923;
+  --color-surface-lighter: #1c2330;
+  --color-text-primary: #f1f3f8;
+  --color-text-secondary: #a6adba;
+  --color-border: #303846;
+  --font-sans: var(--font-hanken);
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }

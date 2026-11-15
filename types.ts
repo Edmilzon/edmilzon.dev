@@ -1,23 +1,31 @@
 export interface ProjectLink {
-  frontend?: string;
-  backend?: string;
-  github?: string;
+  label: string;
+  url: string;
 }
 
 export interface Project {
   title: string;
+  category: string;
   description: string;
   stack: string[];
-  links?: ProjectLink;
+  links: ProjectLink[];
   status?: string;
-  duration?: string;
+}
+
+export interface ExperienceArea {
+  name: string;
+  description: string;
 }
 
 export interface Experience {
-  project: string;
+  company: string;
   role: string;
-  tech: string[];
-  duration?: string;
+  period: string;
+  employmentType?: string;
+  summary: string;
+  areas: ExperienceArea[];
+  stack: string[];
+  links?: ProjectLink[];
 }
 
 export interface SiteConfig {
@@ -25,21 +33,28 @@ export interface SiteConfig {
   title: string;
   description: string;
   url: string;
-  ogImage: string;
   author: {
     name: string;
     email: string;
     location: string;
     university: string;
     role: string;
+    semester: string;
+    expectedGraduation: string;
   };
   links: {
     github: string;
     linkedin: string;
-    twitter: string;
     email: string;
   };
   skills: { category: string; items: string[] }[];
   projects: Project[];
   experience: Experience[];
+  education: {
+    degree: string;
+    university: string;
+    stage: string;
+    expectedGraduation: string;
+    complementary: string[];
+  };
 }

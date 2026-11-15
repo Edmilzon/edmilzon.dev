@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
+import Script from "next/script";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
+import "./styles/site.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
 });
 
@@ -29,17 +26,18 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: "es_BO",
     type: "website",
-    images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [{ url: siteConfig.ogImage }],
+    images: ["/opengraph-image"],
   },
-  robots: {
-    index: true,
-    follow: true,
+  robots: { index: true, follow: true },
+  other: {
+    "site-kind": "other",
+    "page-type": "service",
   },
 };
 
@@ -47,11 +45,21 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="min-h-screen bg-surface font-sans text-text-primary antialiased">
+    <html
+      lang="es"
+      className={hanken.variable}
+      data-type="service"
+      data-radius="soft"
+      data-buttons="arrow"
+      data-motion="live"
+    >
+      <body>
+        <a className="skip-link" href="#main">Saltar al contenido</a>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main">{children}</main>
         <Footer />
+        <Script src="/assets/system.js" strategy="afterInteractive" type="module" />
+        <Script src="/assets/motion/motion.js" strategy="afterInteractive" type="module" />
       </body>
     </html>
   );

@@ -1,67 +1,57 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const navLinks = [
-  { href: "#about", label: "Sobre mí" },
-  { href: "#projects", label: "Proyectos" },
-  { href: "#skills", label: "Habilidades" },
-  { href: "#experience", label: "Experiencia" },
-  { href: "#education", label: "Educación" },
-  { href: "#contact", label: "Contacto" },
-  { href: "/blog", label: "Blog" },
+  { href: "#experiencia", label: "Experiencia" },
+  { href: "#proyectos", label: "Proyectos" },
+  { href: "#tecnologias", label: "Tecnologías" },
+  { href: "#formacion", label: "Formación" },
 ];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-surface/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-primary">
-          {siteConfig.name}
-        </Link>
+    <header className="site-header">
+      <div className="wrap site-header-inner">
+        <a className="site-brand" href="/#inicio" onClick={() => setOpen(false)}>
+          <span className="site-brand-mark" aria-hidden="true">AL</span>
+          <span>Ariel Luna</span>
+        </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav
+          aria-label="Navegación principal"
+          className={`site-nav${open ? " is-open" : ""}`}
+          id="primary-navigation"
+        >
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-text-secondary transition-colors hover:text-primary"
-            >
+            <a href={`/${link.href}`} key={link.href} onClick={() => setOpen(false)}>
               {link.label}
-            </Link>
+            </a>
           ))}
+          <a className="mobile-contact-link" href="/#contacto" onClick={() => setOpen(false)}>
+            Contacto
+          </a>
         </nav>
 
+        <a className="header-cta" href={siteConfig.links.email}>
+          Hablemos <span aria-hidden="true">↗</span>
+        </a>
+
         <button
-          onClick={() => setOpen(!open)}
-          className="text-text-secondary md:hidden"
-          aria-label="Menú"
+          aria-controls="primary-navigation"
+          aria-expanded={open}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          className="menu-toggle"
+          onClick={() => setOpen((current) => !current)}
+          type="button"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </div>
-
-      {open && (
-        <div className="border-t border-border bg-surface md:hidden">
-          <div className="flex flex-col gap-2 px-6 py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="py-2 text-sm text-text-secondary transition-colors hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 }

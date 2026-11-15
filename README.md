@@ -1,38 +1,38 @@
-# edmilzon.dev
+# Portafolio de Ariel Edmilzon Luna Tudela
 
-Portafolio personal de **Edmilzon Tudela** — Full Stack Developer.
+Portafolio profesional de un desarrollador de software de Cochabamba, Bolivia. Reúne su experiencia en Soft-Craft-Bol, proyectos web y móviles, tecnologías y formación.
+
+## Contenido
+
+- Presentación y datos profesionales
+- Experiencia en sistemas de farmacia, autopartes y cafetería
+- Proyectos seleccionados con enlaces a sus repositorios
+- Tecnologías, formación y contacto
 
 ## Stack
 
-- **Framework:** Next.js 16 (App Router)
-- **UI:** React 19, Tailwind CSS 4, Framer Motion, Lucide
-- **Blog:** MDX con next-mdx-remote, remark-gfm, rehype-highlight
-- **Email:** Resend API
-- **Testing:** Vitest + Testing Library
-- **Linting:** ESLint 9
+- **Framework:** Next.js 16 con App Router
+- **Interfaz:** React 19, TypeScript y Tailwind CSS 4
+- **Estilos:** sistema visual propio con Hanken Grotesk
+- **Contenido:** artículos MDX
+- **Correo:** enlace directo `mailto:` para contacto
 
-## Scripts
-
-```bash
-npm run dev      # Desarrollo
-npm run build    # Build producción
-npm run start    # Servir build
-npm run lint     # ESLint
-npm run test     # Tests (Vitest)
-```
-
-## Variables de entorno
+## Desarrollo local
 
 ```bash
-RESEND_API_KEY=your_key_here
+npm install
+npm run dev
 ```
 
-## Estructura
+Abre [http://localhost:3000](http://localhost:3000).
 
+## Otros comandos
+
+```bash
+npm run build
+npm run start
+npm run lint
+npm run test
 ```
-app/          # Rutas, layouts, API
-components/   # UI, secciones, layout, blog
-config/       # Configuración del sitio
-content/blog  # Artículos MDX
-lib/          # Utilidades y parser MDX
-```
+
+La API de contacto por Resend está disponible como ruta heredada; la página pública usa actualmente un enlace de correo directo.

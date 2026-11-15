@@ -1,199 +1,194 @@
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Edmilzon Tudela",
-  title: "Edmilzon Tudela — Full Stack Developer",
+  name: "Ariel Edmilzon Luna Tudela",
+  title: "Ariel Edmilzon Luna Tudela — Desarrollador de software",
   description:
-    "Full Stack Developer de Cochabamba, Bolivia. Especialista en NestJS, Next.js, Spring Boot, TypeScript y arquitectura de software.",
-  url: "https://edmilzon.dev",
-  ogImage: "/og.png",
+    "Portafolio de Ariel Edmilzon Luna Tudela, desarrollador de software en Cochabamba, Bolivia. Experiencia con Java, Spring Boot, React, TypeScript, NestJS, Flutter y PostgreSQL.",
+  url: "https://edmilzon-dev.vercel.app",
   author: {
-    name: "Edmilzon Tudela",
+    name: "Ariel Edmilzon Luna Tudela",
     email: "edmilzon.luna@gmail.com",
     location: "Cochabamba, Bolivia",
-    university: "Universidad Mayor de San Simon (UMSS)",
-    role: "Full Stack Developer",
+    university: "Universidad Mayor de San Simón (UMSS)",
+    role: "Desarrollador de software",
+    semester: "8.º semestre",
+    expectedGraduation: "2027",
   },
   links: {
     github: "https://github.com/Edmilzon",
-    linkedin: "https://linkedin.com/in/edmilzon-tudela-5ab03b40b",
-    twitter: "https://twitter.com/EdmilzonLT",
+    linkedin: "https://www.linkedin.com/in/edmilzon-tudela-5ab03b40b",
     email: "mailto:edmilzon.luna@gmail.com",
   },
-  skills: [
+  experience: [
     {
-      category: "Avanzado",
-      items: [
-        "TypeScript", "JavaScript", "Java (Spring Boot)", "Python",
-        "NestJS / Node.js", "Linux (Arch Linux)", "Arquitectura de Software",
-        "Docker / AWS / Vercel", "Git / GitHub",
+      company: "Soft-Craft-Bol",
+      role: "Desarrollador de software",
+      period: "2026",
+      summary:
+        "Contribuí a sistemas de gestión web para farmacia, autopartes y cafetería, trabajando en flujos de punto de venta, compras, catálogo e inventario.",
+      areas: [
+        {
+          name: "Farmacia",
+          description:
+            "Implementé un endpoint REST paginado para el catálogo del punto de venta, con búsqueda y filtros; integré consultas y sincronización de productos AGEMED, y contribuí a mejoras de navegación, imágenes y vistas de Kardex en React y TypeScript.",
+        },
+        {
+          name: "Autopartes",
+          description:
+            "Contribuí a APIs y módulos para compras masivas y a crédito, proveedores, sucursales y punto de venta.",
+        },
+        {
+          name: "Cafetería",
+          description:
+            "Colaboré en consultas agrupadas para punto de venta, compras, recepción, ventas e inventario, y en mejoras de interfaz para producción, recetas e historial.",
+        },
       ],
+      stack: ["Java", "Spring Boot", "React", "TypeScript", "APIs REST"],
     },
     {
-      category: "Intermedio",
-      items: [
-        "React / Next.js", "React Native", "Flutter (Dart)",
-        "Vue.js", "PostgreSQL / MongoDB", "PHP",
+      company: "Universidad Mayor de San Simón (UMSS)",
+      role: "Desarrollador de software",
+      period: "2024",
+      employmentType: "Trabajo remunerado",
+      summary:
+        "Participé en el desarrollo del Sistema de Becas PBI dentro de la UMSS, como parte de un equipo de cuatro personas.",
+      areas: [
+        {
+          name: "Sistema de Becas PBI",
+          description:
+            "Implementé el registro de estudiantes desde CSV y su asignación por área y nivel. La plataforma apoya convocatorias de becas y evaluación docente.",
+        },
       ],
-    },
-    {
-      category: "Básico",
-      items: [
-        "Kotlin", "C#", "Go", "Rust", "Kubernetes", "Machine Learning",
+      stack: ["Next.js", "NestJS", "PostgreSQL"],
+      links: [
+        {
+          label: "Frontend PBI",
+          url: "https://github.com/Edmilzon/frontend_PBI",
+        },
       ],
     },
   ],
   projects: [
     {
-      title: "Eco Bocado (FoodSave)",
+      title: "Admin Recursos PC",
+      category: "Android · Windows",
       description:
-        "App contra el desperdicio de alimentos. Conecta restaurantes con comida sobrante a personas que la compran con descuento.",
-      stack: ["Flutter", "NestJS", "PostgreSQL"],
-      links: {
-        frontend: "https://github.com/Edmilzon/reduccion_desperdicio_alimentos",
-        backend: "https://github.com/Edmilzon/reduccion_desperdicio_backend",
-      },
-      status: "En desarrollo activo",
+        "Panel Android conectado por USB a un agente de Windows para consultar CPU, RAM y sensores disponibles, incluida GPU NVIDIA cuando el equipo la expone. MVP probado en un TECNO CE9.",
+      stack: ["React Native", "TypeScript", "C# · .NET", "WebSocket"],
+      status: "MVP probado",
+      links: [
+        {
+          label: "Repositorio",
+          url: "https://github.com/Edmilzon/admin_recursos_pc",
+        },
+      ],
     },
     {
-      title: "Sistema Becas UMSS",
+      title: "CDCI",
+      category: "Web · DevOps",
       description:
-        "Plataforma de inscripciones universitarias para la gestión de becas PBI en la UMSS. Automatiza postulación, revisión y asignación.",
-      stack: ["NestJS", "Next.js", "PostgreSQL"],
-      links: { github: "https://github.com/Edmilzon/frontend_PBI" },
-      duration: "1 año como Full Stack Developer",
+        "Plataforma para gestionar proyectos, miembros, permisos y auditoría, con flujos de CI/CD y releases. Las ejecuciones reales requieren configurar el runner Docker y la GitHub App.",
+      stack: ["Next.js", "TypeScript", "Spring Boot", "Java 21", "PostgreSQL"],
+      status: "En desarrollo",
+      links: [
+        {
+          label: "Frontend",
+          url: "https://github.com/Edmilzon/ci-cd_front",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/Edmilzon/ci-cd_back",
+        },
+      ],
     },
     {
-      title: "Plataforma Cursos",
+      title: "Buscador semántico de mascotas",
+      category: "Python · datos semánticos",
       description:
-        "Plataforma educativa con roles (estudiante, profesor, libre), gamificación, progreso y cursos de todo tipo.",
+        "Aplicación que busca mascotas en lenguaje natural sobre una ontología RDF/OWL con SPARQL y razonamiento OWL. Incluye interfaz en español e inglés y datos de razas enriquecidos desde DBpedia.",
+      stack: ["Python", "Streamlit", "spaCy", "RDF/OWL", "SPARQL"],
+      links: [
+        {
+          label: "Repositorio",
+          url: "https://github.com/Edmilzon/search_web",
+        },
+      ],
+    },
+    {
+      title: "Eco Bocado",
+      category: "App móvil · API",
+      description:
+        "Desarrollé la aplicación móvil y su API para publicar excedentes de comida con descuento y vigencia, confirmar pedidos, coordinar el recojo y enviar avisos de preparación.",
+      stack: ["Flutter", "Dart", "NestJS", "PostgreSQL", "TypeORM"],
+      links: [
+        {
+          label: "App Flutter",
+          url: "https://github.com/Edmilzon/reduccion_desperdicio_alimentos",
+        },
+        {
+          label: "API NestJS",
+          url: "https://github.com/Edmilzon/reduccion_desperdicio_backend",
+        },
+      ],
+    },
+    {
+      title: "Plataforma de cursos",
+      category: "Web · educación",
+      description:
+        "Plataforma educativa con perfiles de estudiante, profesor y administrador, cursos y seguimiento del progreso.",
       stack: ["Next.js", "NestJS", "PostgreSQL"],
-      links: {
-        frontend: "https://github.com/Edmilzon/plataforma_cursos_frontend",
-        backend: "https://github.com/Edmilzon/plataforma_cursos_backend",
-      },
+      links: [
+        {
+          label: "Frontend",
+          url: "https://github.com/Edmilzon/plataforma_cursos_frontend",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/Edmilzon/plataforma_cursos_backend",
+        },
+      ],
     },
     {
-      title: "Plataforma Educativa Python",
+      title: "Administración financiera",
+      category: "Android · en desarrollo",
       description:
-        "Curso interactivo de Python con ejercicios prácticos, challenges y seguimiento de progreso.",
-      stack: ["Next.js", "NestJS", "PostgreSQL"],
-      links: { github: "https://github.com/Edmilzon/plataforma_educatica_python" },
-    },
-    {
-      title: "admi-ventas (Mermeladas)",
-      description:
-        "App web de venta de mermeladas artesanales con autenticación, catálogo, carrito, pagos y panel de administración.",
-      stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      links: {
-        frontend: "https://github.com/Edmilzon/admi-ventas-frontend",
-        backend: "https://github.com/Edmilzon/admi-ventas-backend",
-      },
-    },
-    {
-      title: "searchCar (Alquiler Autos)",
-      description:
-        "Plataforma de alquiler de vehículos con búsqueda, reservas y gestión de flota.",
-      stack: ["Next.js", "TypeScript"],
-      links: {
-        frontend: "https://github.com/Edmilzon/searchCar-frontend",
-        backend: "https://github.com/Edmilzon/searchCar-backend",
-      },
-    },
-    {
-      title: "proyect_mercado (E-commerce)",
-      description:
-        "E-commerce multi-usuario para ventas entre distintos usuarios con gestión de productos y pedidos.",
-      stack: ["NestJS", "TypeScript", "PostgreSQL"],
-      links: {
-        frontend: "https://github.com/Edmilzon/proyect_mercado_frontend",
-        backend: "https://github.com/Edmilzon/proyect_mercado_backend",
-      },
-    },
-    {
-      title: "EmotionDetect",
-      description:
-        "Chatbot que detecta el estado emocional del usuario en texto usando K-means, TF-IDF y aprendizaje no supervisado.",
-      stack: ["Python", "Machine Learning", "NLP"],
-      links: { github: "https://github.com/Edmilzon/detecccion_emocion" },
-    },
-    {
-      title: "oh_Sansi (Olimpiadas)",
-      description:
-        "Gestor de olimpiadas y competiciones: registro de medallas, niveles, categorías y participantes.",
-      stack: ["PHP", "Laravel"],
-      links: { github: "https://github.com/Edmilzon/oh_Sansi_backend" },
-    },
-    {
-      title: "Calculadora Flujos Efectivo",
-      description:
-        "Sistema de gestión contable que calcula flujos de efectivo y analiza proyectos financieros.",
-      stack: ["Astro", "TypeScript"],
-      links: { github: "https://github.com/Edmilzon/Calculadora_flujos_efectivo_astro" },
-    },
-    {
-      title: "User Blog API",
-      description:
-        "API REST con 4 entidades relacionadas (usuarios, roles, blogs, artículos) con Spring Boot + JPA.",
-      stack: ["Spring Boot", "JPA", "PostgreSQL"],
-      links: { github: "https://github.com/Edmilzon/user_blog_backend" },
-    },
-    {
-      title: "Tres en Raya IA",
-      description:
-        "Juego con 2 modos de IA: algoritmo Minimax (invencible) y búsqueda en anchura (BFS). Incluye juego del laberinto.",
-      stack: ["Python", "Algoritmos de IA"],
-      links: { github: "https://github.com/Edmilzon/Tres_en_Raya_Proyct_IA" },
-    },
-    {
-      title: "PetFinder",
-      description:
-        "Buscador semántico de mascotas perdidas via SPARQL sobre ontología RDF/OWL con soporte ES/EN.",
-      stack: ["Python", "Flask", "SPARQL"],
-      links: { github: "https://github.com/Edmilzon/search_web" },
+        "Aplicación Android nativa con Kotlin, Jetpack Compose y autenticación con Neon. La persistencia de movimientos y las consultas financieras siguen en desarrollo; aún no está preparada para datos financieros reales.",
+      stack: ["Kotlin", "Jetpack Compose", "Neon Auth"],
+      status: "Proyecto en desarrollo",
+      links: [
+        {
+          label: "Repositorio",
+          url: "https://github.com/Edmilzon/administracion_financiera",
+        },
+      ],
     },
   ],
-  experience: [
+  skills: [
     {
-      project: "Sistema Becas UMSS (PBI)",
-      role: "Full Stack Developer",
-      tech: ["NestJS", "Next.js", "PostgreSQL"],
-      duration: "1 año",
+      category: "Backend y APIs",
+      items: ["Java", "Spring Boot", "NestJS", "Node.js", "APIs REST", "JWT", "WebSocket"],
     },
     {
-      project: "Plataforma Cursos",
-      role: "Full Stack Developer",
-      tech: ["Next.js", "NestJS", "PostgreSQL"],
+      category: "Web y móvil",
+      items: ["TypeScript", "JavaScript", "React", "Next.js", "Flutter", "Dart", "Kotlin"],
     },
     {
-      project: "Curso Aprendizaje Python",
-      role: "Developer / Instructor",
-      tech: ["Next.js", "NestJS", "PostgreSQL"],
+      category: "SQL y bases de datos",
+      items: ["SQL", "PostgreSQL", "JPA", "TypeORM"],
     },
     {
-      project: "App Mermeladas (admi-ventas)",
-      role: "Full Stack Developer",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      project: "searchCar (Alquiler Autos)",
-      role: "Full Stack Developer",
-      tech: ["Next.js", "TypeScript"],
-    },
-    {
-      project: "proyect_mercado (E-commerce)",
-      role: "Full Stack Developer",
-      tech: ["NestJS", "TypeScript", "PostgreSQL"],
-    },
-    {
-      project: "oh_Sansi (Olimpiadas)",
-      role: "Backend Developer",
-      tech: ["PHP", "Laravel"],
-    },
-    {
-      project: "Eco Bocado (FoodSave)",
-      role: "Mobile + Backend Developer",
-      tech: ["Flutter", "NestJS", "PostgreSQL"],
+      category: "Linux y entrega",
+      items: ["Linux", "GitHub Actions", "Jenkins", "Cypress"],
     },
   ],
+  education: {
+    degree: "Ingeniería en Sistemas",
+    university: "Universidad Mayor de San Simón (UMSS)",
+    stage: "8.º semestre",
+    expectedGraduation: "2027",
+    complementary: [
+      "Facilitador en varias actividades académicas de Linux · UMSS · 120 horas · abril de 2026",
+    ],
+  },
 };
